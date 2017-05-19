@@ -11,15 +11,23 @@ Note that you need to have all file types showing in your file explorer, and als
 
 Next, add the following lines to the .ini file: 
 
+```
 -Xdebug 
+```
 <br>
+```
 -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044
+```
 
 Also, add these lines or change their values to match below:
-<br>
+
+```
 -Dhilo.cef.cache.enabled=false 
+```
 <br>
+```
 -Dhilo.cef.frame.debug=true
+```
 
 ![](./photos/13-ini.PNG)
 
@@ -43,15 +51,19 @@ Since the backend runs separately, in a Java Virtual Machine, you can use Eclips
 
 Open your extension in Eclipse, navigate to “Run” in the top menu bar, and select “Debug configurations” from the dropdown.
 
-*photo of extension open and dropdown menu
-
 To create a new debug configuration, select “Remote Java Application”. 
+
+![](./photos/16-debug-backend1.png)
 
 Give it a name, browse to the project folder for the extension you will be debugging, and enter 1044 as the port (which we specified in the .ini file). Make sure Lumira is running, and then press “Debug”.
 
-*photo of debug configuration setup
+![](./photos/17-debug-backend2.png)
 
-Click the perspectives icon in the upper-right corner of Eclipse and select “Debug” to open the debug perspective. Here, you can set breakpoints and debug your Java code.
+Click the perspectives icon in the upper-right corner of Eclipse and select “Debug” to open the debug perspective. 
 
-*photo of perspectives icon 
-*photo of breakpoints with vars
+![](./photos/18-debug-backend3.png)
+<br>
+
+Here, you can set breakpoints and debug your Java code.
+<br>
+![](./photos/19-debug-backend4.png)
