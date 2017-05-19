@@ -53,6 +53,14 @@ SampleExtension.js is mostly boilerplate required for the extension to run, so t
 This file launches the extension dialog (that we will create in SampleExtensionDialogController.js), and we return a Promise. If the execution is successful, we resolve the Promise. Otherwise, the Promise is rejected (more on this in the next section).
 
 *photo of Promise
+```java
+var createSample2ExtensionDialog = function(acquisitionState, workflow) {
+var oDeferred = new jQuery.Deferred();
+var controller = new Sample2ExtensionDialogController(acquisitionState, oDeferred, fServiceCall, workflow);
+controller.showDialog();
+return oDeferred.promise();
+};
+```
 
 This file also gives you control over particular workflows: “CREATE” when you originally open the extension, or “EDIT”  and “REFRESH” when you have already imported the data.
 
