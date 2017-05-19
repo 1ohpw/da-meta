@@ -1,7 +1,9 @@
 ## Sample Data Access Extension
 We have a sample Data Access Extension you can explore and use as a starter project, hosted on Github at http://www.github.com/SAP/lumira-extension-da-sample. The extension zip file can be downloaded here, and you can follow the above instructions on ‘“Installing Data Access Extensions” to try it out. 
 
-In this sample extension you can input a name for your dataset and browse your drive for a CSV file to import into Lumira, as well as its metadata .txt file  (sample files included). The sample extension also showcases how you can send requests from the JavaScript client to receive responses from the Java backend. 
+In this sample extension you can input a name for your dataset and browse your drive for a CSV file to import into Lumira, as well as its metadata .txt file  (sample files included). The sample extension also showcases how you can send requests from the JavaScript client to receive responses from the Java backend.
+
+![](./photos/15-sample-da.md) 
 
 ### User Interface (client)
 The user interface in this sample extension uses SAP OpenUI5. We recommend OpenUI5, as it is native to the SDK and allows you to create a seamless user experience that is congruent with Lumira. However, you are able to use any libraries you like!
@@ -307,3 +309,6 @@ public String execute(IDAEProgress callback) throws DAException {
     return null;
 }
 ```
+
+Now, let's see how we can debug our extensions:
+### [Debugging](./debugging.md)

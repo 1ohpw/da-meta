@@ -25,12 +25,11 @@ The user interface is created with JavaScript, and typically a dialog that is di
 
 The backend is created with Java, and reads the query parameters that you input in the user interface. It then fetches the data, converts the data to a CSV file, and imports the data into Lumira. For import, the backend also supplies JSON metadata to classify your data into measures and dimensions.
 
-### Getting Started
 
 To get started, check out the "Sample Extension" and "Debugging" walkthroughs:
 
-##### [Sample Extension](./sample-da.md)
-##### [Debugging](./debugging.md)
+### [Sample Extension](./sample-da.md)
+### [Debugging](./debugging.md)
 
 
 
