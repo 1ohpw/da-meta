@@ -103,11 +103,11 @@ text: "Close",
 type: "Reject",
 width: "100px",
 press: function() {
-    if (oDeferred.state() == "pending") {
-        this.destroy();
-        oDeferred.reject();
-    }
-    dialog.close();
+if (oDeferred.state() == "pending") {
+    this.destroy();
+    oDeferred.reject();
+}
+dialog.close();
 }
 });
 
