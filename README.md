@@ -18,6 +18,8 @@ You can use the “Extension Manager” to easily install existing Data Access E
 - Click “Manual Installation” in the bottom-right corner & navigate to the extension zip file
 - Restart Lumira, and the extension will appear in the list of possible data sources when creating a new document 
 
+![](./photos/20-extension-manager.PNG)
+
 ### Architecture
 There are two parts of an extension: The user interface (client) and the backend. The user interface captures your query input, and the backend fetches the data based on those parameters.
 
