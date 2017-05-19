@@ -277,7 +277,7 @@ unique “id” (e.g. “id0”)
 
 Column objects can also take an “aggregationFunction” key (e.g. “AVERAGE”), and supports hierarchies as well. 
 
-![](./photos/09-metadata.png)
+![](./photos/09-metadata.PNG)
 
 We start by getting the “info” object from the “acquisitionState” object that contains the input parameters from the client. We convert that to a JSONObject so that we can access the values. 
 
@@ -355,7 +355,7 @@ Also, add these lines or change their values to match below:
 -Dhilo.cef.cache.enabled=false
 -Dhilo.cef.frame.debug=true
 
-![](./photos/13-ini.png)
+![](./photos/13-ini.PNG)
 
 Now, restart Lumira and you will be able to debug your code. 
 
@@ -370,7 +370,7 @@ To view and set breakpoints in your extension’s JavaScript files, navigate to 
 
 sap/bi > bundles/com/sap/bi/da/extension > EXTENSION_NAME
 
-![](./photos/debug-ui.png)
+![](./photos/14-debug-ui.PNG)
 
 ### Backend
 Since the backend runs separately, in a Java Virtual Machine, you can use Eclipse to remote debug your Java code.
