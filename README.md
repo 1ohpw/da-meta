@@ -41,7 +41,7 @@ To access the JavaScript, we navigate to:
 
 WebContent > com > sap > bi > da > extension > sampleextension
 
-*photo of folder structure
+![](./photos/01-folder-structure.PNG)
 
 There are two files here that create the user interface: 
 
@@ -94,7 +94,7 @@ This file is where the user interface is created, and where most of your client-
 
 First, we create the dialog that will pop-up when the extension is launched. The dialog will have a cancel button that rejects the Promise, and closes the dialog.
 
-```java
+```javascript
 //Create dialog
 
 //button to close the dialog
@@ -277,13 +277,13 @@ unique “id” (e.g. “id0”)
 
 Column objects can also take an “aggregationFunction” key (e.g. “AVERAGE”), and supports hierarchies as well. 
 
-*photo of metadata
+![](./photos/09-metadata.png)
 
 We start by getting the “info” object from the “acquisitionState” object that contains the input parameters from the client. We convert that to a JSONObject so that we can access the values. 
 
 Here, we get the URL string that the user entered for the metadata to find the txt File. 
 ```java
- @Override
+@Override
 public String execute(IDAEProgress callback) throws DAException {
     try {
         JSONObject infoJSON = new JSONObject(acquisitionState.getInfo());
@@ -355,7 +355,7 @@ Also, add these lines or change their values to match below:
 -Dhilo.cef.cache.enabled=false
 -Dhilo.cef.frame.debug=true
 
-*photo of ini
+![](./photos/13-ini.png)
 
 Now, restart Lumira and you will be able to debug your code. 
 
@@ -370,7 +370,7 @@ To view and set breakpoints in your extension’s JavaScript files, navigate to 
 
 sap/bi > bundles/com/sap/bi/da/extension > EXTENSION_NAME
 
-*photo of file structure w/ breakpoints
+![](./photos/debug-ui.png)
 
 ### Backend
 Since the backend runs separately, in a Java Virtual Machine, you can use Eclipse to remote debug your Java code.
