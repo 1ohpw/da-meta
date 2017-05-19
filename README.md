@@ -53,7 +53,7 @@ SampleExtension.js is mostly boilerplate required for the extension to run, so t
 This file launches the extension dialog (that we will create in SampleExtensionDialogController.js), and we return a Promise. If the execution is successful, we resolve the Promise. Otherwise, the Promise is rejected (more on this in the next section).
 
 *photo of Promise
-<detail>
+
 ```java
 var createSample2ExtensionDialog = function(acquisitionState, workflow) {
 var oDeferred = new jQuery.Deferred();
@@ -62,11 +62,34 @@ controller.showDialog();
 return oDeferred.promise();
 };
 ```
-</detail>
 
 This file also gives you control over particular workflows: “CREATE” when you originally open the extension, or “EDIT”  and “REFRESH” when you have already imported the data.
 
 *photo of workflows
+```java
+// This function will be called during a create dataset workflow
+// This function must immediately return a promise object
+// When the extension is finished performing UI tasks, resolve the promise with the acquisitionState and dataset name
+// Other workflows do not need the dataset name
+// The resolved acquisitionState will be passed to the extension Java backend getDataAcquisitionJobContext()
+this.doCreateWorkflow = function(acquisitionState) {
+    return createSample2ExtensionDialog(acquisitionState, "CREATE");
+};
+
+// This function will be called during an edit dataset workflow
+this.doEditWorkflow = function(acquisitionState) {
+    return createSample2ExtensionDialog(acquisitionState, "EDIT");
+};
+
+// This function will be called during a refresh workflow
+// This function should refresh the dataset with existing parameters
+// Minimal UI should be shown, if any
+this.doRefreshWorkflow = function(acquisitionState) {
+    var oDeferred = new jQuery.Deferred();
+    oDeferred.resolve(acquisitionState);
+    return oDeferred.promise();
+};
+```
 
 ###### SampleExtensionDialogController.js
 
