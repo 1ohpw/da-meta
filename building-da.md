@@ -45,7 +45,7 @@ Right-click the Docs > eclipse.bat file, and select "Open With > Text Editor". S
 
 Next up, we open the file "platform.target" and click the "Set as Target Platform" button in the top-right corner.
 
-![](27-target-platform.PNG)
+![](/photos/27-target-platform.PNG)
 
 Note: ignore any errors in plugin.xml
 
@@ -275,7 +275,7 @@ Before we modify the code here, we'll need to create a metadata file for our dat
 
 ![](/photos/34-metadata-tweet.PNG)
 
-![](/photos/35-metadata-file-structure)
+![](/photos/35-metadata-file-structure.PNG)
 
 Now, we can instantiate our metadata as a File object and read it as a String that we return.
 
@@ -341,6 +341,10 @@ Our extension is now complete and ready to use!
 ![](/photos/37-extension-dialog.PNG)
 
 ![](/photos/38-tweet-data.PNG)
+
+### [Back to Overview](/README.md)
+### [Sample Extension](/sample-da.md)
+### [Debugging](/debugging.md)
 
 
 

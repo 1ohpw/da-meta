@@ -68,4 +68,8 @@ Here, you can set breakpoints and debug your Java code.
 <br>
 ![](./photos/19-debug-backend4.PNG)
 
+Now that we are familiar with debugging extensions, let's walk through how to build our own using the sample extension as starter code.
+
+### [Building Data Access Extensions](./building-da.md)
+### [Sample Extension](./sample-da.md)
 ### [Back to Overview](./README.md)

@@ -33,6 +33,10 @@ To get started, check out the "Sample Extension" and "Debugging" walkthroughs:
 ### [Sample Extension](./sample-da.md)
 ### [Debugging](./debugging.md)
 
+Then, learn more about building your own extension by following the example tutorial:
+
+### [Building Data Access Extensions](./building-da.md)
+
 
 
 
